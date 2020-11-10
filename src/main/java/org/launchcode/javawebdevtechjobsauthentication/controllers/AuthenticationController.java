@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpSession;
 import javax.swing.text.html.Option;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Optional;
 
 @Controller
@@ -35,4 +38,6 @@ public class AuthenticationController {
     private static void setUserInSession(HttpSession session, User user) {
         session.setAttribute(userSessionKey, user.getId());
     }
+
+
 }
